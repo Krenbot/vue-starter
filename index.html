@@ -18,21 +18,13 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="add(5)">Add 5</button>
-      <button v-on:click="subtract(10)">Subtract 10</button>
-      <p v-once>Starting Counter: {{counter}}</p>
+      <button v-on:click="add(10)">Add 10</button>
+      <button v-on:click="subtract(5)">Subtract 5</button>
       <p>Result: {{counter}}</p>
-
-      <form v-on:submit.prevent="submitForm">
-        <p>Your Name: {{confirmedName}}</p>
-        <input
-          type="text"
-          v-on:input="setName($event, 'Krenn')"
-          v-on:keyup.enter="confirmInput"
-        />
-        <!-- <input type="text" /> -->
-        <button>Sign Up</button>
-      </form>
+      <input type="text" v-model="name" />
+      <!-- ↑↑↑ v-model is shortcut for v-bind:value && v-on:input  -->
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your Name: {{name}}</p>
     </section>
   </body>
 </html>
