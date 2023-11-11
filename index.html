@@ -14,18 +14,12 @@
   </head>
   <body>
     <header>
-      <h1>Vue Events</h1>
+      <h1>Vue Dynamic Styling</h1>
     </header>
-    <section id="events">
-      <h2>Events in Action</h2>
-      <button v-on:click="add(10)">Add 10</button>
-      <button v-on:click="subtract(5)">Subtract 5</button>
-      <p>Result: {{counter}}</p>
-      <input type="text" v-model="name" />
-      <!-- ↑↑↑ v-model is shortcut for v-bind:value && v-on:input  -->
-      <input type="text" v-model="lastName" />
-      <button v-on:click="resetInput">Reset Input</button>
-      <p>Your Name: {{fullName}}</p>
+    <section id="styling">
+      <div class="demo"></div>
+      <div class="demo"></div>
+      <div class="demo"></div>
     </section>
   </body>
 </html>
